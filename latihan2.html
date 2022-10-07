@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h1>Formulir Pendaftaran Calon Mahasiswa Baru</h1>
+	<hr>
+	
+		<script type="text/javascript">
+
+			function klik()
+			{
+				var namastr=(document.fform.nama.value);
+				document.fform.namastr.value=namastr;
+
+				var alamatstr=(document.fform.alamat.value);
+				document.fform.alamatstr.value=alamatstr;
+				
+				var sekolahstr=(document.fform.sekolah.value);
+				document.fform.sekolahstr.value=sekolahstr;
+
+				var jenjangstr=(document.fform.jenjang.value);
+				document.fform.jenjangstr.value=jenjangstr;
+
+				 
+
+				
+			}
+
+		</script>
+		 <script src="http://code.jquery.com/jquery-latest.js"></script>
+   <script type="text/javascript">
+
+            $(document).ready(function(){
+               $('.chkbx').click(function(){
+                  var text="";
+                  $('.chkbx:checked').each(function(){
+                     text+=$(this).val()+ ',';
+                  });
+                  text=text.substring(0,text.length-1);
+                  $('#selectedtext').val(text);
+                  var count = $("[type='checkbox']:checked").length;
+                     $('#count').val($("[type='checkbox']:checked").length);
+               });
+            });
+
+   </script>
+	<form name="fform">
+	<pre>
+		Nama              : <input type="text" name="nama" size="100"> <br>
+		Alamat            : <input type="text" name="alamat" size="100"> <br>
+		Asal Sekolah      : <select name="sekolah" size="1">
+			<option value="SMK SINGAPARNA">SMK SINGAPARNA
+			<option value="SMK CENDIKIA">SMK CENDIKIA
+			<option value="SMA 1 SINGAPARNA">SMA 1 SINGAPARNA 
+			</select>	
+
+		Jurusan           : <input type='checkbox' class="chkbx" value='INFORMATIKA'> INFORMATIKA <input type='checkbox' class="chkbx" value='Manajemen Informatika'> Manajemen Informatika 
+		
+		Jenjang           : <input type="radio" name="jenjang" value="Diploma"> Diploma <input type="radio" name="jenjang" value="S1"> S1 
+							
+
+	
+		<input type="button" value="Kirim" onclick="klik()">
+		<input type="reset">
+	
+		Nama             : <input type="text" name="namastr" rows=3 cols=30> <br>
+		Alamat           : <input type="text" name="alamatstr" rows=3 cols=30>  <br>
+		Asal Sekolah     : <input type="text" name="sekolahstr" rows=3 cols=30>  <br>
+		Jurusan di pilih : <input type="text" id='selectedtext'  row=3 cols=30> <br>
+		Jenjang          : <input type="text" name="jenjangstr" row=3 cols=30>
+	</pre>
+	</form>
+</body>
+</html>
