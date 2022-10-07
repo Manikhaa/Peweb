@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <center>
+        <h1>Membuat Kalkulator</h1>
+        <hr>
+        <form>
+     
+            bilangan 1 : <input type="text" id="input1">
+
+
+        <br><br>
+
+            bilangan 2 : <input type="text" id="input2"> <br>
+
+
+        <div id="hasil"></div> <br><br>
+
+        <div id="operator">
+            <button id="tambah">+</button>
+            <button id="kurang">-</button>
+            <button id="bagi">/</button>
+            <button id="kali">x</button>
+            <input type="reset" id="hapus">
+
+        </div>
+
+
+        <script type="text/javascript">
+            
+            let input1 = document.getElementById("input1")
+            let input2 = document.getElementById("input2")
+            function hitungTambah() {
+                hasil.textContent = alert(Number(input1.value) + Number(input2.value))
+            }
+            function hitungKurang() {
+                hasil.textContent = alert(Number(input1.value) - Number(input2.value))
+            }
+            function hitungBagi() {
+                hasil.textContent = alert(Number(input1.value) / Number(input2.value))
+            }
+            function hitungKali() {
+                hasil.textContent = alert(Number(input1.value) * Number(input2.value))
+            }
+            
+            
+            document.getElementById("tambah").onclick = hitungTambah
+            document.getElementById("kurang").onclick = hitungKurang
+            document.getElementById("bagi").onclick = hitungBagi
+            document.getElementById("kali").onclick = hitungKali
+            
+        
+            
+
+        </script>
+        </form>
+        </center>
+    </body>
+</html> 
